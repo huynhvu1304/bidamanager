@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BIDA MANAGER - Mini POS</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="logo">BIDA <span>MANAGER</span></div>
+      <nav class="menu">
+        <button class="menu-item active" type="button" data-view="tables">Quản lý bàn</button>
+        <button class="menu-item" type="button" data-view="revenue">Doanh thu</button>
+        <button class="menu-item" type="button" data-view="settings">Cài đặt</button>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <div class="branch" id="branchName">Chi nhánh</div>
+          <h1>Mini POS Quản Lý Quán Bida</h1>
+          <p>Quản lý bàn, hóa đơn và doanh thu realtime</p>
+        </div>
+        <div class="revenue-chip">
+          <span>Doanh thu hôm nay</span>
+          <strong id="todayRevenue">0 đ</strong>
+        </div>
+      </header>
+
+      <section id="tablesView" class="view active"></section>
+      <section id="revenueView" class="view"></section>
+      <section id="settingsView" class="view"></section>
+    </main>
+  </div>
+
+  <div id="modalOverlay" class="modal-overlay" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-head">
+        <h3 id="modalTitle"></h3>
+        <button id="closeModalBtn" class="modal-close" type="button" aria-label="Đóng">✕</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/tables.js"></script>
+  <script src="js/payment.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
+
