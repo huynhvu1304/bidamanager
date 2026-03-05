@@ -4,8 +4,8 @@
 const CONFIG = {
   storageKey: "bida_pos_v3",
   branchName: "Chi nhánh trung tâm",
-  defaultHourlyRateLo: 120000,
-  defaultHourlyRatePhang: 150000,
+  defaultHourlyRateLo: 60000,
+  defaultHourlyRatePhang: 45000,
   defaultEnableTax: false,
   defaultTaxPercent: 0,
   defaultEnableServiceFee: false,
