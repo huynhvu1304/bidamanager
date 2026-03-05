@@ -49,7 +49,7 @@ function getChangeDisplayText(changeMoney) {
 
 function createQRContent(tableNumber, total) {
   const amountFormatted = formatAmountWithDot(total);
-  const transferContent = `BIDA_BAN${tableNumber}_${formatDateDDMMYYYY(new Date())}_${amountFormatted}`;
+  const transferContent = `BIDA_BAN${tableNumber}-${formatDateDDMMYYYY(new Date())}-${amountFormatted}`;
   const amountNumeric = String(Math.max(0, toFiniteNumber(total, 0)));
 
   return {
